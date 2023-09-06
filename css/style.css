@@ -219,7 +219,7 @@ section article:hover .inner .txt h2 {
   font-size: 3vw;
 }
 section article:hover .inner .txt h2::after {
-  width: 350px;
+  width: 308px;
   background: #c9d3df;
 }
 section article:hover .inner figure {
