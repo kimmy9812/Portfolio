@@ -19,7 +19,7 @@ header {
    align-content: space-between;
 
    .introduce {
-      font: 17px/1.5 "Noto Sans KR";
+      font: 15px/1.5 "Noto Sans KR";
       color: white;
       text-align: center;
       margin-top: 12px;
@@ -49,7 +49,7 @@ header {
       }
 
       p {
-         font: 12.5px/1 "Noto Sans KR";
+         font: 11px/1 "Noto Sans KR";
          opacity: 0.5;
 
       }
@@ -57,7 +57,7 @@ header {
    }
 
    div {
-      font: 15px/2"Noto Sans KR"; 
+      font: 12px/2"Noto Sans KR"; 
       color: white;
 
       .box {
@@ -178,14 +178,14 @@ section {
                   width: 40px;
                   height: 1px;
                   background: #ffffff;
-                  margin-top: 20px;
+                  margin-top: 15px;
                   transition: 1s;
                }
                
             }
 
             p {
-               font: bold 25px/1.4 "Noto Sans KR";
+               font: bold 20px/1 "Noto Sans KR";
                color: #ffffff;
             }
 
@@ -195,9 +195,9 @@ section {
             }
 
             ul {
-               font: bold 17px/2.5 "Noto Sans KR";
+               font: 13px/2.5 "Noto Sans KR";
                color: white;
-               margin-top: 20px;
+               margin-top: 30px;
                margin-left: 25px;
             }
             
@@ -205,8 +205,8 @@ section {
          }
 
          figure {
-            width: 100%;
-            height: 15vh;
+            width: 300px;
+            height: 150px;
             overflow: hidden;
             transition: 0.5s;
             position: relative;
