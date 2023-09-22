@@ -1,29 +1,44 @@
 const articles = document.querySelectorAll('article');
 const aside = document.querySelector('aside');
 const btnClose = aside.querySelector('.btnClose');
+const asideH2 = aside.querySelector('h2');
+const asideP = aside.querySelector('p');
+const asideSpan = aside.querySelector('span');
+const asideUl = aside.querySelector('ul');
 
 articles.forEach(article => {
-	article.addEventListener('mouseenter', e => {
-		e.currentTarget.querySelector('video').play();
-	})
+  article.addEventListener('mouseenter', e => {
+    e.currentTarget.querySelector('video').play();
+  });
 
-	article.addEventListener('mouseleave', e => {
-		e.currentTarget.querySelector('video').pause();
-	})
+  article.addEventListener('mouseleave', e => {
+    e.currentTarget.querySelector('video').pause();
+  });
 
-	article.addEventListener('click', e => {
-		const tit = e.currentTarget.querySelector('h2').innerText;
-		const con = e.currentTarget.querySelector('p').innerText;
-		const vidSrc = e.currentTarget.querySelector('video').getAttribute('src');
+  article.addEventListener('click', e => {
+    // Remove the 'hover' class from all li elements
+    const liElements = e.currentTarget.querySelectorAll('li');
+    liElements.forEach(li => {
+      li.classList.remove('hover');
+    });
 
-		aside.querySelector('h2').innerText = tit;
-		aside.querySelector('p').innerText = con;
-		aside.querySelector('video').setAttribute('src', vidSrc);
-		aside.classList.add('on');
-	})
+    // Add the 'hover' class to the clicked li element
+    e.target.classList.add('hover');
 
-	btnClose.addEventListener('click', ()=>{
-		aside.classList.remove('on');
-	})
+    const tit = e.currentTarget.querySelector('h2').innerText;
+    const con = e.currentTarget.querySelector('p').innerText;
+    const spanText = e.currentTarget.querySelector('span').innerText;
+    const ulHTML = e.currentTarget.querySelector('ul').innerHTML;
 
-})
+    asideH2.innerText = tit;
+    asideP.innerText = con;
+    asideSpan.innerText = spanText;
+    asideUl.innerHTML = ulHTML;
+
+    aside.classList.add('on');
+  });
+
+  btnClose.addEventListener('click', () => {
+    aside.classList.remove('on');
+  });
+});

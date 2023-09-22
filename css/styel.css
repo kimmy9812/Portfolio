@@ -1,0 +1,356 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #91aecf;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+header {
+  width: 20%;
+  height: 100%;
+  padding: 10vh 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+header .introduce {
+  font: 15px/1.5 "Noto Sans KR";
+  color: white;
+  text-align: center;
+  margin-top: 12px;
+}
+header h1 {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+header h1 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+header h1 span {
+  font: bold 1.2vw/1.8 "Poppins";
+  width: 100%;
+  text-align: center;
+}
+header h1 p {
+  font: 11px/1 "Noto Sans KR";
+  opacity: 0.5;
+}
+header div {
+  font: 12px/2 "Noto Sans KR";
+  color: white;
+}
+header div .box {
+  width: 225px;
+  height: 8px;
+  background: #a1bddd;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+header div .box .graph {
+  width: 215px;
+  height: 6px;
+  background: white;
+  border-radius: 3px;
+  animation: photoshop 2s;
+}
+header div .box2 {
+  width: 225px;
+  height: 8px;
+  background: #a1bddd;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+header div .box2 .graph {
+  width: 200px;
+  height: 6px;
+  background: white;
+  border-radius: 3px;
+  animation: illustrater 2s;
+}
+header div .box3 {
+  width: 225px;
+  height: 8px;
+  background: #a1bddd;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+header div .box3 .graph {
+  width: 120px;
+  height: 6px;
+  background: white;
+  border-radius: 3px;
+  animation: xdfigma 2s;
+}
+header div .box4 {
+  width: 225px;
+  height: 8px;
+  background: #a1bddd;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+header div .box4 .graph {
+  width: 50px;
+  height: 6px;
+  background: white;
+  border-radius: 3px;
+  animation: etc 2s;
+}
+header div i {
+  font-size: 2px;
+  margin-right: 10px;
+}
+
+section {
+  width: 80%;
+  height: 100%;
+  padding-top: 10vh;
+  padding-right: 5vh;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+section article {
+  flex: 1;
+  transition: 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+section article::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 95%;
+  position: absolute;
+  top: 0px;
+  left: -100px;
+  opacity: 0;
+  background: #ffffff;
+  transition: 1s;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+section article .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 50px 30px 100px;
+}
+section article .inner .txt {
+  padding-top: 90px;
+  transition: 1s;
+}
+section article .inner .txt h2 {
+  font: bold 2vw/1 "Poppins";
+  color: white;
+  margin-bottom: 40px;
+  transition: 1s;
+}
+section article .inner .txt h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #ffffff;
+  margin-top: 15px;
+  transition: 1s;
+}
+section article .inner .txt p {
+  font: bold 20px/1 "Noto Sans KR";
+  color: #ffffff;
+}
+section article .inner .txt span {
+  font: normal 13px/1 "Noto Sans KR";
+  color: white;
+}
+section article .inner .txt ul {
+  font: 13px/2.5 "Noto Sans KR";
+  color: white;
+  margin-top: 30px;
+  margin-left: 25px;
+}
+section article .inner figure {
+  width: 290px;
+  height: 150px;
+  overflow: hidden;
+  transition: 0.5s;
+  position: relative;
+  top: 0px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  filter: saturate(0.2);
+}
+section article .inner figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+section article:hover {
+  flex: 1.3;
+}
+section article:hover::before {
+  left: 0px;
+  opacity: 0.1;
+}
+section article:hover .inner .txt {
+  padding-top: 20px;
+}
+section article:hover .inner .txt h2 {
+  font-size: 3vw;
+}
+section article:hover .inner .txt h2::after {
+  width: 308px;
+  background: #c9d3df;
+}
+section article:hover .inner figure {
+  height: 20vh;
+  top: 25px;
+  filter: saturate(1.2);
+}
+
+nav {
+  position: absolute;
+  top: 4vh;
+  right: 5vw;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin: 15px;
+}
+nav ul li a {
+  font-size: 18px;
+  color: #eee;
+}
+
+aside {
+  width: 100%;
+  height: 100vh;
+  background: #91aecf;
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  z-index: 2;
+  padding: 5vw;
+  padding-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: 1s;
+}
+aside.on {
+  opacity: 1;
+  left: 0%;
+}
+aside .txtBox {
+  width: 25%;
+}
+aside .txtBox h2 {
+  font: 50px/1 "Poppins";
+  color: white;
+  margin-bottom: 15px;
+}
+aside .txtBox p {
+  font: bold 28px/1 "Noto Sans KR";
+  color: white;
+}
+aside .txtBox p {
+  font: bold 22px/1 "Noto Sans KR";
+  color: #ffffff;
+}
+aside .txtBox span {
+  font: normal 15px/3 "Noto Sans KR";
+  color: white;
+}
+aside .txtBox ul {
+  font: 15px/2.5 "Noto Sans KR";
+  color: white;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+aside .txtBox ul li:hover {
+  text-decoration: underline;
+  font-size: 16px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+aside .imgBox {
+  display: block;
+  width: 70%;
+  padding-top: 70px;
+}
+aside .imgBox img {
+  width: 80%;
+  border-radius: 15px;
+}
+aside .btnClose {
+  position: absolute;
+  top: 100px;
+  right: 5vw;
+  font: 16px/1 "Poppins";
+  color: #ddd;
+  cursor: pointer;
+}
+
+@keyframes photoshop {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 215px;
+  }
+}
+@keyframes illustrater {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+@keyframes xdfigma {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 120px;
+  }
+}
+@keyframes etc {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+
+/*# sourceMappingURL=styel.css.map */

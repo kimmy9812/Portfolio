@@ -13,10 +13,11 @@ main {
 header {
    width: 20%;
    height: 100%;
-   padding: 10vh 5vw;
+   padding: 3vh 5vw;
    display: flex;
    flex-wrap: wrap;
-   align-content: space-between;
+   position: relative;
+   z-index: 1;
 
    .introduce {
       font: 15px/1.5 "Noto Sans KR";
@@ -70,7 +71,7 @@ header {
          }
          width: 225px;
          height: 8px;
-         background: #a1bddd;
+         background: rgba(255, 255, 255, 0.3);
          border-radius: 3px;
          border: 1px solid white;
       }
@@ -85,7 +86,7 @@ header {
          }
          width: 225px;
          height: 8px;
-         background: #a1bddd;
+         background: rgba(255, 255, 255, 0.3);
          border-radius: 3px;
          border: 1px solid white;
       }
@@ -100,7 +101,7 @@ header {
          }
          width: 225px;
          height: 8px;
-         background: #a1bddd;
+         background: rgba(255, 255, 255, 0.3);
          border-radius: 3px;
          border: 1px solid white;
       }
@@ -115,7 +116,7 @@ header {
          }
          width: 225px;
          height: 8px;
-         background: #a1bddd;
+         background: rgba(255, 255, 255, 0.3);
          border-radius: 3px;
          border: 1px solid white;
       }
@@ -131,12 +132,16 @@ section {
    width: 80%;
    height: 100%;
    padding-top: 10vh;
+   padding-right: 5vh;
    display: flex;
+   position: relative;
+   z-index: 1;
    
    article {
       flex: 1;
       transition: 0.5s;
       position: relative;
+      cursor: pointer;
 
       &::before {
          content: "";
@@ -199,13 +204,24 @@ section {
                color: white;
                margin-top: 30px;
                margin-left: 25px;
+
+               li {
+                  div {
+                     display: none;
+                     font: 8px/1 "Noto Sans KR";
+                  }
+               } 
+            }
+
+            div {
+               display: none;;
             }
             
 
          }
 
          figure {
-            width: 300px;
+            width: 290px;
             height: 150px;
             overflow: hidden;
             transition: 0.5s;
@@ -274,6 +290,121 @@ nav {
             color: #eee;
          }
       }
+   }
+}
+
+aside {
+   width: 100%;
+   height: auto;
+   background: #bbafcc;
+   position: absolute;
+   top: 0px;
+   left: -100%;
+   z-index: 2;
+   padding: 5vw;
+   padding-left: 5%;
+   display: flex;
+   justify-content: space-between;
+   opacity: 0;
+   transition: 1s;
+
+   &.on {
+      opacity: 1;
+      left: 0%;
+   }
+
+   .txtBox {
+      width: 25%;
+      position: fixed;
+
+      h2 {
+         font: 60px/1 "Poppins";
+         color: white;
+         margin-bottom: 15px;
+      }
+
+      p{
+         font: bold 32px/1 "Noto Sans KR";
+         color: white;
+      }
+
+      p {
+         font: bold 25px/1 "Noto Sans KR";
+         color: #ffffff;
+      }
+
+      span {
+         font: normal 15px/3 "Noto Sans KR";
+         color: white;
+      }
+
+      ul {
+         font: 17px/2"Noto Sans KR";
+         color: white;
+         margin-top: 25px;
+         margin-left: 25px;
+         
+         li { 
+            &:hover{
+               font: bold 18px/2 "Noto Sans KR";
+               transition: 0.5s;
+               cursor: pointer;  
+               div {
+                  display: block;
+                  transition: 2s;
+                  
+                  
+               }
+            }
+
+            div {
+               position: relative;
+               top: -100;
+               width: 300px;
+               height: 150px;
+               background-color: black;
+               display: none;
+               font: 14px/2 "Noto Sans KR";
+               padding-bottom: 20px;
+
+      
+      
+      
+            }
+         }
+      }
+      
+   }
+
+   .aran {
+      display: block;
+      width: 90%;
+      padding-top:70px;
+      padding-left: 500px;
+
+      img {
+         width: 100%;
+         padding-bottom: 0;
+      }
+   }
+   .dolphin {
+      display: none;
+      width: 90%;
+      padding-top:70px ;
+      padding-left: 500px;
+
+      img {
+         width: 100%;
+      }
+   }
+
+   .btnClose {
+      position: fixed;
+      top: 100px;
+      right: 5vw;
+      font: 16px/1 "Poppins"; 
+      color: #ddd;
+      cursor: pointer;
    }
 }
 
